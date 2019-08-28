@@ -4,7 +4,6 @@ const hbs = require('hbs');
 
 //require('dotenv').config({ path: path.join(__dirname, '../.env') })
 
-require('dotenv').config()
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
