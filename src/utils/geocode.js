@@ -1,7 +1,6 @@
 const request = require('request');
 const token = process.env.DARK_SKY_TOKEN
 const geocode = (address, callback) => {
-    console.log(token)
     const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${token}&limit=1`;
     request({ url, json: true }, (error, { body }) => {
         if (error) {
