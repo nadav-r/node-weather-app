@@ -1,5 +1,5 @@
 const request = require('request');
-const secret ='d5ce81066d903c4020d272c3856845f1'
+const secret =process.env.DARK_SKY_SECRET
 const forecast = (longitude, latitude, callback) => {
     const url = `https://api.darksky.net/forecast/${secret}/${encodeURIComponent(longitude)},${encodeURIComponent(latitude)}?units=si`;
     request({url, json: true}, (error, { body })=>{
